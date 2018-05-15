@@ -2,17 +2,11 @@
 
 <div class="well well-sm">
 
-  <form class="form-inline" {{action 'addNewCategory' newCategoryName on='submit'}}>
-    <div class="form-group">
-      <label>ID:</label>
-    {{ input value=newCategoryId}}
-      <label for="new-category">New Product:</label>
-      {{input type="text" class="form-control" id="new-category" placeholder="Product name" value=newCategoryName}}
-      <label>Description:</label>
-    {{input value=newCategoryDesc}}
-      {{!-- when adding database: value=newCategory.name--}}
-    </div>
-    <button type="submit" class="btn btn-default">Add</button>
+  <form>
+    <label>ID:</label> {{input value=newCategoryId}}
+    <label>Title::</label> {{input value=newCategoryName}}
+    <label>Description:</label> {{input value=newCategoryDesc}}
+    <button type="submit" {{action 'addNewCategory' newCategoryId newCategoryName newCategoryDesc}}>Add</button>
   </form>
 
 </div>
@@ -20,32 +14,27 @@
 <table class="table table-striped">
   <caption>List of products</caption>
   <thead>
-  <tr>
-    <th>#</th>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
   </thead>
   <tbody>
 
-  {{#each model as |category|}}
-    <tr>
-      <td>{{category.id}}</td>
-      <td>{{category.name}}</td>
-      <td {{action 'editCategory' category}}>
-          {{#if category.isEditing}}
-            {{input value=category.name}}
-            <button {{action 'updateCategory' category}}>Save</button>
-          {{else}}
-            {{category.desc}}
-          {{/if}}
+    {{#each model as |category|}}
+      <tr>
+        <td>{{category.id}}</td>
+        <td>{{category.name}}</td>
+        <td>{{category.desc}}</td>
+
+      
+        <td>
+          <button class="btn btn-xs btn-danger" {{action 'deleteCategory' category}}>Del</button>
+          <button class="btn btn-xs btn-success" {{action 'editCategory' category}}>Edit</button>
         </td>
-      <td>
-        <button class="btn btn-xs btn-danger" {{action 'deleteCategory' category}}>Del</button>
-        <button class="btn btn-xs btn-success" {{action 'editCategory' category}}>Edit</button>
-      </td>
-    </tr>
-  {{/each}}
+      </tr>
+    {{/each}}
 
 
 

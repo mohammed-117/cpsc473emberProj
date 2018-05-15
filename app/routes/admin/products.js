@@ -40,11 +40,10 @@ export default Route.extend({
 
   actions: {
 
-    addNewCategory(id, name, release_date, desc) {
+    addNewCategory(id, name, desc) {
       this.controller.get('model').pushObject({
         id,
         name,
-        release_date,
         desc
       });
     },
