@@ -1,0 +1,63 @@
+<h1>Products Admin Page</h1>
+
+<div class="well well-sm">
+
+  <form class="form-inline" {{action 'addNewCategory' newCategoryName on='submit'}}>
+    <div class="form-group">
+      <label>ID:</label>
+    {{ input value=newCategoryId}}
+      <label for="new-category">New Product:</label>
+      {{input type="text" class="form-control" id="new-category" placeholder="Product name" value=newCategoryName}}
+      <label>Description:</label>
+    {{input value=newCategoryDesc}}
+      {{!-- when adding database: value=newCategory.name--}}
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+  </form>
+
+</div>
+
+<table class="table table-striped">
+  <caption>List of products</caption>
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  {{#each model as |category|}}
+    <tr>
+      <td>{{category.id}}</td>
+      <td>{{category.name}}</td>
+      <td {{action 'editCategory' category}}>
+          {{#if category.isEditing}}
+            {{input value=category.name}}
+            <button {{action 'updateCategory' category}}>Save</button>
+          {{else}}
+            {{category.desc}}
+          {{/if}}
+        </td>
+      <td>
+        <button class="btn btn-xs btn-danger" {{action 'deleteCategory' category}}>Del</button>
+        <button class="btn btn-xs btn-success" {{action 'editCategory' category}}>Edit</button>
+      </td>
+    </tr>
+  {{/each}}
+
+
+
+  </tbody>
+</table>
+
+
+Total Product Counter: {{model.length}}
+
+{{#if newCategory.isError}}
+  Error!!
+  {{#each newCategory.errors as |error|}}
+    {{error}}
+  {{/each}}
+{{/if}}

@@ -1,0 +1,76 @@
+<h1>Our products</h1>
+
+{{#each model as |productUnit|}}
+  {{movie-listing product=productUnit}}
+  {{/each}}
+
+
+
+<img src="https://vignette.wikia.nocookie.net/the-superman/images/3/3b/Man_of_Steel.png/revision/latest?cb=20130416175849" alt="Man of Steel">
+{{link-to 'Man of Steel' 'productpage'}}
+
+<img src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/2/25/Iron_Man_poster_3.png/revision/latest?cb=20120420114513">
+
+<img src="https://vignette.wikia.nocookie.net/marvelmovies/images/1/1b/The_Avengers_-_Tony_Stark_promotional_poster.png/revision/latest?cb=20120313061035" width="200" height="300">
+
+<img src="https://speckyboy.com/wp-content/uploads/2014/06/dark_knight_rises_alternative_movie_poster.png" width="200" height="300">
+
+<img src="https://i.pinimg.com/originals/10/30/a7/1030a71d8b23a691e311141a45966d7f.png" width="200" height="300">
+
+<img src="https://images-na.ssl-images-amazon.com/images/I/61vZAabm3dL.jpg" width="200" height="300">
+
+<img src="https://ih0.redbubble.net/image.252580651.7523/flat,800x800,070,f.u3.jpg"width="200" height="300">
+
+<img src="https://fanart.tv/fanart/movies/2108/movieposter/the-breakfast-club-532f1cc783459.jpg"width="200" height="300">
+
+<img src="https://i.pinimg.com/originals/52/70/dd/5270ddaf9777e6e9fa34473726e60405.png"width="200" height="300">
+
+<img src="https://vignette.wikia.nocookie.net/english-voice-over/images/9/94/Saving_Private_Ryan_1998_DVD_Cover.png/revision/latest?cb=20170605121221&path-prefix=sv"width="200" height="300">
+
+<img src="http://3ipycv2ugat81cqgps20hwke-wpengine.netdna-ssl.com/wp-content/uploads/2015/11/the-revenant-poster.png"width="200" height="300">
+
+<img src="https://vignette.wikia.nocookie.net/mazerunner/images/a/a1/Maze_Runner_The_Scorch_Trials_first_poster.png/revision/latest?cb=20150519094919"width="200" height="300">
+
+<img src="https://1.bp.blogspot.com/-DVb2vs8Lm9Q/WgoiDAZvTEI/AAAAAAAAAY0/hy3aMNJZx54-RmyiVUWUYfj6BilolYDpgCLcBGAs/s1600/inception.png"width="200" height="300">
+
+<img src="http://www.themonolith.com/wp-content/uploads/The-Wolverine-movie-poster.png"width="200" height="300">
+
+<img src="https://www.studiobinder.com/wp-content/uploads/2017/12/How-to-Make-a-Movie-Poster-Free-Movie-Poster-Credits-Template-Teaser-Movie-Poster-Jurassic-Park.png?x25081"width="200" height="300">
+
+
+{{!--
+{{#each model as |product|}}
+  <article class="listing">
+    <h3>{{product.name}}</h3>
+    <div class="detail date">
+      <span>release_date:</span> {{product.release_date}}
+    </div>
+    <div class="detail type">
+      <span>Description:</span> {{product.desc}}
+    </div>
+  </article>
+{{/each}}
+
+--}}
+
+
+
+{{#each model as |products|}}
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{product.name}}</h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li>ID: {{product.id}}</li>
+          <li>SKU: {{product.release_date}}</li>
+          <li>Category: {{product.desc}}</li>
+        </ul>
+      </div>
+      <div class="panel-footer">
+        Unit price: <strong>{{product.unitPrice}}</strong>
+      </div>
+    </div>
+  </div>
+{{/each}}
