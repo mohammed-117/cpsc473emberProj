@@ -1,3 +1,25 @@
+# cpsc473pj2
+Ember.js
+
+Project 2: Movie Ticket Website
+
+Section: 02
+
+| Team Members              | Github Name   |
+| -------------             | ------------- |
+| Vu, Don Long              | DonVu         |
+| Tran, Scott               | scotttran636  |
+| Hassnain, Mohammed        | mohammed-117  |
+| Bui, Emily Mai            | emilyemilyb   |
+| Moka,Vishnu Shesha        | VishnuMoka    |
+
+Use Ember.js to build a web application. You may use any additional third-party Web Service APIs, libraries, or modules, provided that you comply with the terms of their licenses.
+
+Build a site where...
+People can buy movie tickets on a website.
+
+
+
 # store-app
 
 This README outlines the details of collaborating on this Ember application.
