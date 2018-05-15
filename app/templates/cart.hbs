@@ -1,22 +1,233 @@
-<h1>Your Cart</h1>
-<div class="cart-contents"></div>
+  <head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    
+	<style>
+	
+	body {
+    background-image: url("https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg");
+	}
+	
+	.containerMain {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 25px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+                   }
+	
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+	
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
 
-<div class="col-25">
-  <div class="container">
-    <h4>Cart
-      <span class="price" style="color:black">
-        <i class="fa fa-shopping-cart"></i>
-        <b>4</b>
-      </span>
-    </h4>
-    <p><a href="#">Iron Man</a> <span class="price">$15</span></p>
-    <p><a href="#">Superman</a> <span class="price">$15</span></p>
-    <p><a href="#">The Dark Knight</a> <span class="price">$8</span></p>
-    <p><a href="#">The Avengers</a> <span class="price">$12</span></p>
-    <hr>
-    <p>Total <span class="price" style="color:black"><b>$50</b></span></p>
-  </div>
-</div>
+ 
+button:focus,
+input:focus {
+  outline:0;
+}
+
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #11b2ad;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+	</style>
+	
+	
+	
+	<title>CPSC 473 Project 2</title>
+  </head>
+
+  
+    <h1 style="text-align:center">Movie Tickets</h1>  
+
+
+   <div class="shopping-cart">
+      <!-- Title -->
+      <div class="title">
+        <h2 style="text-align:left">Shopping Cart</h2> 
+      </div>
+      </div>
+	  
+ 
+    <div class="containerMain">	  
+	  
+      <!-- Movie Ticket .1 -->
+      <div class="item">
+        <div class="buttons">
+          
+          
+        </div>
+
+        <div class="image">
+          <img src="item-1.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span><a href="http://localhost:4200/productpage">Man of Steel</a>: $30</span>
+          
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button"> + </button>
+          <input type="text" name="name" value="0">
+<button class="minus-btn" type="button" name="button"> - </button>
+        </div>
+
+        
+      </div>
+
+      <!-- Movie Ticket .2 -->
+      <div class="item">
+        <div class="buttons">
+          
+         
+        </div>
+
+        <div class="image">
+          <img src="item-2.png" alt=""/>
+        </div>
+
+        <div class="description">
+          <span><a href="#">Iron Man</a>: $15</span>
+          
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button"> + </button>
+            
+          
+          <input type="text" name="name" value="0">
+          <button class="minus-btn" type="button" name="button"> - </button>
+        </div>
+
+		
+		      <!-- Movie Ticket .3 -->
+      <div class="item">
+        <div class="buttons">
+          
+         
+        </div>
+
+        <div class="image">
+          <img src="item-2.png" alt=""/>
+        </div>
+
+        <div class="description">
+          <span><a href="#">Superman</a>: $15</span>
+          
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button"> + </button>
+            
+          
+          <input type="text" name="name" value="0">
+          <button class="minus-btn" type="button" name="button"> - </button>
+        </div>
+		
+		      <!-- Movie Ticket .4 -->
+      <div class="item">
+        <div class="buttons">
+          
+         
+        </div>
+
+        <div class="image">
+          <img src="item-2.png" alt=""/>
+        </div>
+
+        <div class="description">
+          <span><a href="#">The Dark Knight</a>: $20</span>
+          
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button"> + </button>
+            
+          
+          <input type="text" name="name" value="0">
+          <button class="minus-btn" type="button" name="button"> - </button>
+        </div>
+       
+      </div>
+
+      <!-- Movie Ticket .5 -->
+      <div class="item">
+        <div class="buttons">
+          
+          
+        </div>
+
+        <div class="image">
+          <img src="item-3.png" alt="" />
+        </div>
+
+        <div class="description">
+          <span><a href="#">The Avengers</a>: $20</span>
+         
+        </div>
+
+        <div class="quantity">
+<button class="plus-btn" type="button" name="button"> + </button>
+          <input type="text"  name="name" value="0">
+<button class="minus-btn" type="button" name="button"> - </button>
+        </div>
+
+        
+      </div>
+    </div>
+	
+	    </div>
+		</div>
+  
+	
+	    <ul id="shopping-cart-actions">
+
+        <li>
+            <a href="http://localhost:4200/" class="btn">Continue Shopping</a>
+        </li>
+        <li>
+            <a href="http://localhost:4200/creditcard" class="btn">Checkout</a>
+        </li>
+    </ul>
+	
+
+	
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+	
+  
+  
 
 
 {{link-to 'Checkout' 'checkout'}}
