@@ -1,7 +1,17 @@
 'use strict';
 
 module.exports = function(environment) {
+
   let ENV = {
+    firebase: {
+      apikey: 'AIzaSyD9Khq7sSLjXJjzC9HbZfib_neKUkWHWIA',
+      authDomain: 'emberproj-4664d.firebaseapp.com',
+      databaseURL: 'https://emberproj-4664d.firebaseio.com',
+      storageBucket: 'emberproj-4664d.appspot.com',
+    },
+
+
+
     modulePrefix: 'store-app',
     environment,
     rootURL: '/',

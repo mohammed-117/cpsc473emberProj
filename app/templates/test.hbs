@@ -1,0 +1,17 @@
+{{#each model as |product|}}
+  <article class="listing">
+    <h3>{{product.movie_name}}</h3>
+    <div class="detail name">
+      <span>name:</span> {{product.movie_name}}
+    </div>
+    <div class="detail image">
+      <span>movie_image:</span> <img src = {{product.movie_image}}>
+    </div>
+    <div class="detail date">
+      <span>release_date:</span> {{product.release_date}}
+    </div>
+    <div class="detail desc">
+      <span>desc:</span> {{product.description}}
+    </div>
+  </article>
+{{/each}}

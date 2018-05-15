@@ -16,6 +16,8 @@ Router.map(function() {
   this.route('products', function() {});
   this.route('checkout');
   this.route('productpage');
+  this.route('contact');
+  this.route('test');
 });
 
 export default Router;

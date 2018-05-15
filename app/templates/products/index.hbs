@@ -1,1 +1,13 @@
 {{outlet}}
+
+{{#each model as |product|}}
+  <article class="listing">
+    <h3>{{product.name}}</h3>
+    <div class="detail date">
+      <span>release_date:</span> {{product.release_date}}
+    </div>
+    <div class="detail type">
+      <span>Description:</span> {{product.desc}}
+    </div>
+  </article>
+{{/each}}
