@@ -1,4 +1,4 @@
-# cpsc473pj2
+# 473 Front-End Web Development Project 2
 Ember.js
 
 Project 2: Movie Ticket Website
